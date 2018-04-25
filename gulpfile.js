@@ -8,7 +8,7 @@ gulp.task("test", () => {
 });
 
 gulp.task("lint", () => {
-    return gulp.src(["**/*.js", "!node_modules/**"])
+    return gulp.src(["./**/*.js", "!node_modules/**"])
         .pipe(eslint())
         .pipe(eslint.failAfterError());
 });
