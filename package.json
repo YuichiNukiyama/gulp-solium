@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "all": "gulp"
   },
   "keywords": [
     "gulpplugin",
