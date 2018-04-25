@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11.1
+
+    steps:
+      - checkout
+
+      - run:
+        name: prepare gulp-cli
+        command: npm install -g gulp-cli
+
+      - run:
+        name: install dependencies
+        command: npm install
+
+      - run:
+        name: test
+        command: gulp
