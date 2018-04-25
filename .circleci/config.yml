@@ -8,13 +8,13 @@ jobs:
       - checkout
 
       - run:
-        name: prepare gulp-cli
-        command: npm install -g gulp-cli
+          name: prepare gulp-cli
+          command: npm install -g gulp-cli
 
       - run:
-        name: install dependencies
-        command: npm install
+          name: install dependencies
+          command: npm install
 
       - run:
-        name: test
-        command: gulp
+          name: test
+          command: gulp
