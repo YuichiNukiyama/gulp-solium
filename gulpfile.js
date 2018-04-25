@@ -10,7 +10,10 @@ gulp.task("test", () => {
 gulp.task("lint", () => {
     return gulp.src(["./*.js", "test/*.js", "!node_modules/**"])
         .pipe(eslint())
-        .pipe(eslint.failAfterError());
+        .pipe(eslint.results((results) => {
+            console.log(`error count: ${results.errorCount}`);
+            console.log(`warning count: ${results.warningCount}`);
+        }));
 });
 
 gulp.task("default", ["lint", "test"], () => {
